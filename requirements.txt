@@ -4,5 +4,7 @@ keras == 2.4.3
 keras-vggface == 0.6
 keras_applications==1.0.8
 pandas
+protobuf==3.20.0
+
 # -e .
 
