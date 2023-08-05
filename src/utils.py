@@ -3,26 +3,21 @@ from src.logger import logger
 import pickle
 import sys
 
-
 def load_pkl(file_path):
     try:
-        with open(file_path,'rb') as pkl_file:
-            loaded_file = pickle.load(file=pkl_file)
-            logger.info(f'{file_path} in pickle file has been loaded.')
-
+        with open(file_path, 'rb') as pkl_file:
+            loaded_file = pickle.load(pkl_file)
+            logger.info(f'{file_path} loaded successfully from the pickle file.')
             return loaded_file
     except Exception as e:
-        raise CustomException(e,sys)
+        logger.error(f"Error occurred while loading {file_path} from pickle file: {e}")
+        raise CustomException(e, sys)
 
-    
-
-def dump_pkl(obj,file_path):
+def dump_pkl(obj, file_path):
     try:
-        with open(file_path,'wb') as pkl_file:
-            dumped_file = pickle.dump(obj=obj,file=pkl_file)
-            logger.info(f'{file_path} in pickle file has been dumped.')
-            
-            return dumped_file
-    
+        with open(file_path, 'wb') as pkl_file:
+            pickle.dump(obj, pkl_file)
+            logger.info(f'{file_path} has been successfully dumped to a pickle file.')
     except Exception as e:
-        raise CustomException(e,sys)
+        logger.error(f"Error occurred while dumping {file_path} to a pickle file: {e}")
+        raise CustomException(e, sys)

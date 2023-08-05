@@ -12,7 +12,7 @@ from src.logger import logger
 
 class Recommend:
     def __init__(self) -> None:
-        self.face_array = detect_face(r'data_path\ranbir_kapoor.png')
+        self.face_array = detect_face(r'data_path\rajni.jpg')
         logger.info("Face detected and initialized.")            
     
     def prediction(self, model):
