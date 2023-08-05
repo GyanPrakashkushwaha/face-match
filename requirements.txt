@@ -9,5 +9,6 @@ matplotlib
 tqdm
 sys
 Pillow
+scikit-learn
 # -e .
 
