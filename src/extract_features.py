@@ -1,9 +1,6 @@
-from keras_vggface.vggface import VGGFace
 from keras_vggface.utils import preprocess_input
-from keras.preprocessing import image
 import numpy as np
 import cv2
-
 import tqdm
 from src.exceptions import CustomException
 import sys
@@ -11,7 +8,6 @@ import warnings
 warnings.filterwarnings('ignore')
 from src.logger import logger
 
-model = VGGFace(model='resnet50', include_top=False, input_shape=(224, 224, 3), pooling='avg')
 
 
 def feature_extractor(img_path , model):
