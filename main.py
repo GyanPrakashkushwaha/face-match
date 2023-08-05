@@ -5,7 +5,7 @@ from src.utils import load_pkl , dump_pkl
 from src.extract_features import (extract_features , 
                                    model)
 
-
+from src.recommend import feature_list , file_names
 
 img_path = load_pkl(file_path='model/img_files_path.pkl')
 
@@ -17,6 +17,9 @@ img_path = load_pkl(file_path='model/img_files_path.pkl')
 
 
 
+
+print(feature_list)
+print(len(file_names))
 
 
 

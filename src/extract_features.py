@@ -23,7 +23,7 @@ def feature_extractor(img_path , model):
     preprocessed_img = preprocess_input(expanded_img) #This function preprocesses the input image array according to the requirements of the specific pre-trained model
     # logger.info(f'Preprocessing using [preprocess_input] method has done.')
 
-    return model.predict(preprocessed_img) ,  # This method takes the input data, performs forward propagation through the model, and generates predictions for the input data
+    return model.predict(preprocessed_img).flatten() ,  # This method takes the input data, performs forward propagation through the model, and generates predictions for the input data
 
 
 def extract_features(imgs_file_paths , model):
