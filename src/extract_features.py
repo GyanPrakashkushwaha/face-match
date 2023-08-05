@@ -34,6 +34,17 @@ def extract_features(imgs_file_paths , model):
     
     except Exception:
         raise CustomException(Exception , sys)
+    
+
+def extract_features_uploaded_img(imgs_file_paths , model):
+    return feature_extractor(img_path=imgs_file_paths,model=model)
+
+        
+
+
+    
+
+
 
 
 
