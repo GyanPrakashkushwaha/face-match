@@ -7,11 +7,13 @@ import pickle
 import tqdm
 from src.exceptions import CustomException
 import sys
+from src.utils import load_pkl
+import warnings
+warnings.filterwarnings('ignore')
 
 model = VGGFace(model='resnet50', include_top=False, input_shape=(224, 224, 3), pooling='avg')
 
-imgs_file_paths = pickle.load(file=open(file=r'model/img_files_path.pkl',mode='rb'))
-
+imgs_file_paths = load_pkl(file_path='model/img_files_path.pkl')
 def feature_extractor(img_path , model):
     img_array = cv2.resize(cv2.imread(filename=img_path),dsize=((224,224))).astype(np.float32) # Here I just reading the image and resizing it.
   
@@ -28,9 +30,9 @@ imgs_features = []  # making the features list .
 # print(imgs_features)
 # imgs_features.clear()
 
-try:
-    for file in tqdm.tqdm(imgs_file_paths):
-        imgs_features.append(feature_extractor(img_path=file,model=model))
-except Exception:
-    raise CustomException(Exception , sys)
+# try:
+#     for file in tqdm.tqdm(imgs_file_paths):
+#         imgs_features.append(feature_extractor(img_path=file,model=model))
+# except Exception:
+#     raise CustomException(Exception , sys)
     

@@ -17,13 +17,3 @@ class CustomException(Exception):
 
     def __str__(self):
         return self.error_msg
-
-if __name__=="__main__":
-    try:
-        a = 1/0
-        # raise CustomException
-    except Exception as e:
-        logger.info('ZERO Division ERRor')
-        raise CustomException(e,sys)
-
-
