@@ -26,7 +26,7 @@ def dump_pkl(obj, file_path):
 
 def save_uploaded_img(image):
     try:
-        with open(os.path.join('uploads',image.name),'wb') as file_:
+        with open(os.path.join('uploaded_images',image.name),'wb') as file_:
             file_.write(image.getbuffer())
         return True
     except:

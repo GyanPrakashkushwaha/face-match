@@ -1,3 +1,7 @@
+# ignore loaded image
+
+uploaded_image/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

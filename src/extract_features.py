@@ -32,7 +32,6 @@ def extract_features(imgs_file_paths , model):
         logger.info(f'appended all the imgs_features')
         return imgs_features
     
-        
     except Exception:
         raise CustomException(Exception , sys)
 
