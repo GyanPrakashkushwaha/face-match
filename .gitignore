@@ -1,6 +1,6 @@
 # ignore loaded image
 
-uploaded_image/*
+uploaded_images/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
