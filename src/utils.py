@@ -2,6 +2,7 @@ from src.exceptions import CustomException
 from src.logger import logger
 import pickle
 import sys
+import os
 
 def load_pkl(file_path):
     try:
@@ -21,3 +22,13 @@ def dump_pkl(obj, file_path):
     except Exception as e:
         logger.error(f"Error occurred while dumping {file_path} to a pickle file: {e}")
         raise CustomException(e, sys)
+
+
+def save_uploaded_img(image):
+    try:
+        with open(os.path.join('uploads',image.name),'wb') as file_:
+            file_.write(image.getbuffer())
+        return True
+    except:
+        return False
+
