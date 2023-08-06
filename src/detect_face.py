@@ -1,5 +1,5 @@
 import numpy as np
-from mtcnn import MTCNN 
+from mtcnn import MTCNN
 import cv2
 import os
 from PIL import Image
