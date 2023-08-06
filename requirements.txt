@@ -1,32 +1,32 @@
 streamlit
 opencv-python
-protobuf==3.19.0
+protobuf
 scikit-learn
-mtcnn>=0.1.0
-tensorflow==2.5.0
-keras==2.4.3
-keras-vggface==0.6
-keras_applications==1.0.8
-# cython==0.29.24
-numpy==1.19.2
+mtcnn
+tensorflow
+keras
+keras-vggface
+keras_applications
+# cython9.24
+numpy
 
 
-# mtcnn>=0.1.0
-# tensorflow==2.5.0
-# keras==2.4.3
-# keras-vggface==0.6
-# keras_applications==1.0.8
-# numpy==1.19.5
-# cython==0.29.23
+# mtcnn>.0
+# tensorflow.0
+# keras.3
+# keras-vggface
+# keras_applications.8
+# numpy9.5
+# cython9.23
 # pandas
 # matplotlib
 # tqdm
 # Pillow
 # scikit-learn
 # streamlit
-# pip==23.2.1
+# pip2.1
 # opencv-python-headless
-# protobuf==3.19.0
+# protobuf9.0
 # # -e .
 
 
