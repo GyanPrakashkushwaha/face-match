@@ -115,6 +115,11 @@ if img is not None:
                         f"<b>Similarity Score:</b> {similarity_score_lst[4]}%</p>", unsafe_allow_html=True)
             st.image(image=imgs[4], width=200, channels='BGR')
 
+        if actor_name[1] == actor_name[2] == actor_name[3] == actor_name[4] == actor_name[0]:
+            st.markdown(f'> ### {actor_name[0]} is only Yours Sibling🤭')
+        else:
+            st.markdown(f"> ## Many actors are your sibling🤯\n made by 👨🏻‍💻Gyan Prakash Kushwaha")
+
 
 
 
