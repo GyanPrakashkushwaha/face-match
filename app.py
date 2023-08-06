@@ -42,7 +42,7 @@ if img is not None:
         recommendation = rec.recommend(similarity_lst=similarities)
         # st.write(recommend)
 
-        st.subheader('Your Sibling Celebreties:')
+        st.subheader('Your Sibling Celebreties🙈😍:')
 
         imgs = []
         similarity_score = []
