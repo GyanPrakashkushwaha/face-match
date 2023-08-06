@@ -9,7 +9,7 @@ import os
 st.set_page_config(page_title="Face-Match", page_icon=":😄:", layout="wide", initial_sidebar_state="expanded")
 
 
-st.title('Which Celebrety is your Sibling?')
+st.title('Which Celebrety is your Sibling🤔💭')
 st.markdown('>##### This model contains 8,664 photos featuring 100 distinct actors, Utilizing cosine similarity calculations, the model effectively identifies and retrieves the most akin images that bear resemblance to the inputted facial features, enabling precise face matching capabilities.')
 
 img = st.file_uploader('Upload Image')
