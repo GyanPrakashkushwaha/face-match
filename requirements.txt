@@ -1,15 +1,14 @@
 streamlit
 opencv-python
-protobuf
+protobuf==3.19.0
 scikit-learn
-mtcnn
-tensorflow
-keras==2.3.1
-keras-vggface
-keras_applications
-# cython
+mtcnn>=0.1.0
+tensorflow==2.5.0
+keras==2.4.3
+keras-vggface==0.6
+keras_applications==1.0.8
+# cython==0.29.24
 numpy==1.19.3
-
 
 # mtcnn>.0
 # tensorflow.0
