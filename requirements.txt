@@ -10,7 +10,7 @@ tqdm
 Pillow
 scikit-learn
 streamlit
-pip==23.2.1
+pip -m pip install --upgrade pip
 opencv-python-headless
 protobuf==3.19.0
 -e .
