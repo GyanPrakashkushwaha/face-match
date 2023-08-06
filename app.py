@@ -119,7 +119,7 @@ if img is not None:
         if actor_name[1] == actor_name[2] == actor_name[3] == actor_name[4] == actor_name[0]:
             st.markdown(f'> ### {actor_name[0]} is only Yours Sibling🤭 \n made by 👨🏻‍💻Gyan Prakash Kushwaha')
         else:
-            st.markdown(f"> ## Many actors are your sibling🤯\n made by 👨🏻‍💻Gyan Prakash Kushwaha")
+            st.markdown(f"> ## Multiple actors are your sibling🤯\n made by 👨🏻‍💻Gyan Prakash Kushwaha")
 
 
 
