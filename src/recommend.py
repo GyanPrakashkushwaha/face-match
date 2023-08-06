@@ -26,16 +26,16 @@ class Recommend:
         logger.info("Face prediction completed.")
         return result
 
-    def similarity_list(self, features_list,face_array):
-        result = self.prediction(face_array)
-        # result = np.array(result)
+    def similarity_list(self, features_list,result):
+        # self.result = self.prediction(face_array)
+        # result = result
         try:
-            self.similarity = []
+            similarity = []
             for i in range(len(features_list)):
-                self.similarity_for_each = cosine_similarity(result.reshape(1,-1), features_list[i].reshape(1,-1))[0][0]
-                self.similarity.append(self.similarity_for_each)
+                similarity_for_each = cosine_similarity(result, features_list[i])[0][0]
+                similarity.append(similarity_for_each)
 
-            return self.similarity
+            return similarity
         except Exception as e:
             logger.error(f"Error occurred in similarity_list method: {e}")
             raise CustomException(e, sys)
