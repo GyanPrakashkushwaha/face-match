@@ -1,21 +1,17 @@
-from src.utils import load_pkl, dump_pkl
 import numpy as np
-from src.constants import MODEL
 from mtcnn import MTCNN 
 import cv2
-from pathlib import Path
 import os
-import matplotlib.pyplot as plt
 from PIL import Image
-from keras_vggface.utils import preprocess_input
 from src.exceptions import CustomException
 import sys
 from src.logger import logger
 
-detector = MTCNN()
-os.chdir(r'd:\\vscode_machineLearning\\BEST_PROJECTS\\face-match')
+
 
 def detect_face(image_path):
+    detector = MTCNN()
+    os.chdir(r'd:\\vscode_machineLearning\\BEST_PROJECTS\\face-match')
     try:
         logger.info(f"Loading image from {image_path}.")
         sample_img = cv2.imread(image_path)
