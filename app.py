@@ -9,7 +9,7 @@ import os
 st.set_page_config(page_title="Face-Match", page_icon=":😄:", layout="wide", initial_sidebar_state="expanded")
 
 
-st.title('Which Celebrety is your sibling?')
+st.title('Which Celebrety is your Sibling?')
 
 img = st.file_uploader('Upload Image')
 os.makedirs('uploaded_images',exist_ok=True)
@@ -18,7 +18,8 @@ if img is not None:
     if save_uploaded_img(img):
         displayImg = Image.open(img)
         st.image(image=displayImg,width=350,channels='BGR',caption='Your Image')
-        # st.write(cv2.imread(os.path.join('uploaded_images',img.name)))
+
+        st.markdown('---')
 
 
         features_list = load_pkl('model/img_features.pkl')
