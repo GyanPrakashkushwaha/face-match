@@ -10,6 +10,7 @@ st.set_page_config(page_title="Face-Match", page_icon=":😄:", layout="wide", i
 
 
 st.title('Which Celebrety is your Sibling?')
+st.markdown('>##### This model contains 8,664 photos featuring 100 distinct actors, Utilizing cosine similarity calculations, the model effectively identifies and retrieves the most akin images that bear resemblance to the inputted facial features, enabling precise face matching capabilities.')
 
 img = st.file_uploader('Upload Image')
 os.makedirs('uploaded_images',exist_ok=True)
@@ -116,9 +117,9 @@ if img is not None:
             st.image(image=imgs[4], width=200, channels='BGR')
 
         if actor_name[1] == actor_name[2] == actor_name[3] == actor_name[4] == actor_name[0]:
-            st.markdown(f'> ### {actor_name[0]} is only Yours Sibling🤭')
+            st.markdown(f'> ### {actor_name[0]} is only Yours Sibling🤭 \n made by 👨🏻‍💻Gyan Prakash Kushwaha')
         else:
-            st.markdown(f"> ## Many actors are your sibling🤯\n made by 👨🏻‍💻Gyan Prakash Kushwaha")
+            st.markdown(f"> ## Multiple actors are your sibling🤯\n made by 👨🏻‍💻Gyan Prakash Kushwaha")
 
 
 
