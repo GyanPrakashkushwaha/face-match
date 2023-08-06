@@ -12,21 +12,23 @@ from src.logger import logger
 
 class Recommend:
     def __init__(self) -> None:
-        self.face_array = detect_face(r'data_path\rajni.jpg')
-        logger.info("Face detected and initialized.")            
+        # self.face_array = detect_face(img)
+        logger.info("Face detected and initialized.") 
+        pass
     
-    def prediction(self, model):
-        face_array_ = self.face_array
-        expanded_img = np.expand_dims(face_array_, axis=0)
+    def prediction(self,face_array):
+        # face_arrayss = self.face_array
+        expanded_img = np.expand_dims(face_array, axis=0)
         preprocessed_img = preprocess_input(expanded_img)
         
         logger.info("Face prediction started.")
-        result = model.predict(preprocessed_img)
+        result = MODEL.predict(preprocessed_img)
         logger.info("Face prediction completed.")
         return result
 
-    def similarity_list(self, features_list):
-        result = self.prediction(MODEL)
+    def similarity_list(self, features_list,face_array):
+        result = self.prediction(face_array)
+        # result = np.array(result)
         try:
             self.similarity = []
             for i in range(len(features_list)):

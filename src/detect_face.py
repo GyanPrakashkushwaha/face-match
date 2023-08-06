@@ -13,8 +13,9 @@ import sys
 from src.logger import logger
 
 detector = MTCNN()
+os.chdir(r'd:\\vscode_machineLearning\\BEST_PROJECTS\\face-match')
 
-def detect_face(image_path: str):
+def detect_face(image_path):
     try:
         logger.info(f"Loading image from {image_path}.")
         sample_img = cv2.imread(image_path)
@@ -33,4 +34,4 @@ def detect_face(image_path: str):
         return face_array
     except Exception as e:
         logger.error(f"Error occurred in detect_face method: {e}")
-        raise CustomException(e, sys)
+        print(e)

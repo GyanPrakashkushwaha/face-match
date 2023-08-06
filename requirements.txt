@@ -7,10 +7,9 @@ pandas
 protobuf==3.20.0
 matplotlib
 tqdm
-sys
 Pillow
 scikit-learn
 streamlit
--e .
+# -e .
 
  
