@@ -13,6 +13,7 @@ from src.logger import logger
 def feature_extractor(img_path , model):
     img_array = cv2.resize(cv2.imread(filename=img_path),dsize=((224,224))).astype(np.float32) # Here I just reading the image and resizing it.
     # logger.info(f'converted the pictures to images')
+    
 
     expanded_img = np.expand_dims(img_array,axis=0) # Insert a new axis that will appear at the axis position in the expanded array shape.
 
@@ -35,9 +36,10 @@ def extract_features(imgs_file_paths , model):
     except Exception:
         raise CustomException(Exception , sys)
     
+    
 
-def extract_features_uploaded_img(imgs_file_paths , model):
-    return feature_extractor(img_path=imgs_file_paths,model=model)
+# def extract_features_uploaded_img(imgs_paths , model):
+#     return feature_extractor(img_path=imgs_paths,model=model)
 
         
 
