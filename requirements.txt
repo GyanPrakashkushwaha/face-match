@@ -4,10 +4,10 @@ protobuf
 scikit-learn
 mtcnn
 tensorflow
-keras
+keras==2.3.1
 keras-vggface
 keras_applications
-# cython9.24
+# cython
 numpy
 
 
