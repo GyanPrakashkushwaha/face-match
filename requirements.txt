@@ -10,6 +10,6 @@ Pillow
 scikit-learn
 streamlit
 pip==23.2.1
-opencv-python
+opencv-python-headless
 # -e .
 
