@@ -1,3 +1,6 @@
+streamlit
+opencv-python
+protobuf==3.19.0
 scikit-learn
 mtcnn>=0.1.0
 tensorflow==2.5.0
@@ -5,8 +8,6 @@ keras==2.4.3
 keras-vggface==0.6
 keras_applications==1.0.8
 numpy==1.19.2
-streamlit
-opencv-python-headless
-protobuf==3.19.0
+
 
 
