@@ -8,5 +8,5 @@ numpy==1.19.2
 streamlit
 opencv-python-headless
 protobuf==3.19.0
--e .
+
 
