@@ -38,8 +38,8 @@ def extract_features(imgs_file_paths , model):
     
     
 
-# def extract_features_uploaded_img(imgs_paths , model):
-#     return feature_extractor(img_path=imgs_paths,model=model)
+def extract_features_uploaded_img(imgs_paths , model):
+    return feature_extractor(img_path=imgs_paths,model=model)
 
         
 
