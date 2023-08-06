@@ -10,4 +10,6 @@ tqdm
 Pillow
 scikit-learn
 streamlit
+pip==23.2.1
 # -e .
+
