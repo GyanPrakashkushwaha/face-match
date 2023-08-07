@@ -3,6 +3,7 @@ opencv-python
 protobuf==3.19.0
 scikit-learn
 mtcnn
-tensorflow==2.8.0
-keras==2.8.0rc0
-keras-vggface==0.5
+tensorflow==2.5.0  # Check compatible version for keras-vggface
+keras==2.4.3  # Check compatible version for keras-vggface
+keras-vggface==0.6  # Use the latest compatible version
+keras_applications
