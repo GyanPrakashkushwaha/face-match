@@ -25,6 +25,7 @@ if img1 and img2 is not None:
         display_img1 = Image.open(img1)
         display_img2 = Image.open(img2)
 
+
         col3 , col4 = st.columns(2)
         with col3:
             st.image(image=display_img1,width=350,channels='BGR',caption='Your Image')
