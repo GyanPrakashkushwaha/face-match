@@ -9,10 +9,9 @@ import cv2
 
 st.set_page_config(page_title="Two-Match", page_icon=":😄:", layout="wide", initial_sidebar_state="expanded")
 
+
+st.title('Two Faces✌🏻(Similarity between two Faces)')
 col1 ,col2 = st.columns(2)
-
-
-
 with col1:
     img1 = st.file_uploader('Upload Image')
 
@@ -39,44 +38,5 @@ if img1 and img2 is not None:
         pred1 , pred2 = rec.prediction(face_array1=face_array1,face_array2=face_array2)
 
         output = rec.similarity(result1=pred1,result2=pred2)
-        st.markdown(f'> ## Both Faces Similarity score is :{output[0][0]}')
+        st.markdown(f'> ## Both Faces Similarity score is :{round(100*(output[0][0]),ndigits=3)}%')
         
-
-
-        
-
-        
-        
-        
-
-
-        
-
-
-
-
-
-# os.makedirs('uploaded_images',exist_ok=True)
-# if img is not None:
-    
-#     if save_uploaded_img(img):
-#         displayImg = Image.open(img)
-#         st.image(image=displayImg,width=350,channels='BGR',caption='Your Image')
-
-#         st.markdown('---')
-
-#         face_arrayss = detect_face(image_path=os.path.join('uploaded_images',img.name))
-
-#         rec = Recommend()
-#         opt = rec.prediction(face_arrayss)
-        
-
-
-#         # similarities = rec.similarity_list(features_list=features_list,result=opt)
-#         # st.write(similarity)
-
-        # recommendation = rec.recommend(similarity_lst=similarities)
-        # st.write(recommend)
-
-        # st.subheader('Your Sibling celebrities🙈😍:')
-        # st.markdown('<br/>',unsafe_allow_html=True)
