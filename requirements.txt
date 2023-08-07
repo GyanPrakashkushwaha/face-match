@@ -88,7 +88,6 @@ scikit-learn
 scipy
 six
 smmap
--e git+https://gitom/GyanPrakashkushwaha/face-mait@bda88bcefbf57cda6b9448bbedc78055e505e27c#eggsrc
 stack-data
 streamlit
 tenacity
