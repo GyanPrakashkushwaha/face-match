@@ -8,29 +8,36 @@ import os
 
 st.set_page_config(page_title="Two-Match", page_icon=":😄:", layout="wide", initial_sidebar_state="expanded")
 
+col1 ,col2 = st.columns(2)
 
-st.title('Which celebrity is your Sibling🤔💭')
-st.markdown('>##### This model contains 8,664 photos featuring 100 distinct actors, Utilizing cosine similarity calculations, the model effectively identifies and retrieves the most akin images that bear resemblance to the inputted facial features, enabling precise face matching capabilities.')
+with col1:
+    img1 = st.file_uploader('Upload Image')
 
-img = st.file_uploader('Upload Image')
-os.makedirs('uploaded_images',exist_ok=True)
-if img is not None:
+with col2:
+    img2 = st.file_uploader('Upload New Image')
+
+
+
+
+
+# os.makedirs('uploaded_images',exist_ok=True)
+# if img is not None:
     
-    if save_uploaded_img(img):
-        displayImg = Image.open(img)
-        st.image(image=displayImg,width=350,channels='BGR',caption='Your Image')
+#     if save_uploaded_img(img):
+#         displayImg = Image.open(img)
+#         st.image(image=displayImg,width=350,channels='BGR',caption='Your Image')
 
-        st.markdown('---')
+#         st.markdown('---')
 
-        face_arrayss = detect_face(image_path=os.path.join('uploaded_images',img.name))
+#         face_arrayss = detect_face(image_path=os.path.join('uploaded_images',img.name))
 
-        rec = Recommend()
-        opt = rec.prediction(face_arrayss)
+#         rec = Recommend()
+#         opt = rec.prediction(face_arrayss)
         
 
 
-        # similarities = rec.similarity_list(features_list=features_list,result=opt)
-        # st.write(similarity)
+#         # similarities = rec.similarity_list(features_list=features_list,result=opt)
+#         # st.write(similarity)
 
         # recommendation = rec.recommend(similarity_lst=similarities)
         # st.write(recommend)
