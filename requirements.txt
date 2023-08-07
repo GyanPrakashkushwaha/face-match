@@ -4,7 +4,7 @@ protobuf==3.19.0
 scikit-learn
 mtcnn
 tensorflow==2.6.0
-keras==2.3.1
+keras==2.6
 keras-vggface==0.6
 keras_applications
 
