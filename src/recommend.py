@@ -30,46 +30,8 @@ class Recommend:
         return result1 , result2
 
     def similarity(self, result1,result2):
-        # similarity_score = []
-
         sm_score = cosine_similarity(result1 ,result2)
-        # similarity_score.append(sm_score)
         return sm_score
-
-
-        # try:
-        #     similarity = []
-        #     for i in range(len(features_list)):
-        #         similarity_for_each = cosine_similarity(result, features_list[i])[0][0]
-        #         similarity.append(similarity_for_each)
-
-        #     return similarity
-        # except Exception as e:
-        #     logger.error(f"Error occurred in similarity_list method: {e}")
-        #     raise CustomException(e, sys)
-        
-    # def recommend(self, similarity_lst):
-    #     self.similarity = []
-    #     self.index = []
-    #     def feature(x):
-    #         return x[1]
-    #     most_similar_5_imgs = sorted(list(enumerate(similarity_lst)), reverse=True, key=feature)[0:5]
-
-    #     return most_similar_5_imgs
-    
-    # def show_similar_img(self, file_path, most_similars):
-    #     try:
-    #         for i in most_similars:
-    #             img = cv2.imread(file_path[i[0]])
-    #             plt.imshow(img)
-    #             plt.title(label=f'similarity score: {i[1]}')
-    #             plt.show()
-    #     except Exception as e:
-    #         logger.error(f"Error occurred in show_similar_img method: {e}")
-    #         raise CustomException(e, sys)
- 
-                
-            
 
         
 

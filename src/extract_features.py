@@ -30,29 +30,6 @@ def extract_features(imgs_file_paths , model):
     except Exception:
         raise CustomException(Exception , sys)
     
-    
-
-# def extract_features_uploaded_img( model,face_array= None ,img_path= None):
-#     if face_array is not None:
-#         return feature_extractor(img_path=img_path,model=model)
-#     elif img_path is not None:
-#         return feature_extractor(img_array=face_array,model=model)
-#     else:
-#         pass
-
-
-# def extract_features_uploaded_img_face_array(model,face_array_new):
-#     return feature_extractor(img_array=face_array_new,model=model)
-
-
-  
-
-
-        
-
-
-    
-
 
 
 
