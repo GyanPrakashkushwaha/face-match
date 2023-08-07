@@ -3,7 +3,7 @@ altair
 asttokens
 astunparse
 attrs
-backcall
+# backcall
 backpooneinfo
 blinker
 cachetools
