@@ -6,3 +6,4 @@ mtcnn
 tensorflow==2.8.0
 keras==2.8.0rc0
 keras-vggface
+keras_applications
