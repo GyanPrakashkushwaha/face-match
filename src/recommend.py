@@ -16,17 +16,20 @@ class Recommend:
         logger.info("Face detected and initialized.") 
         pass
     
-    def prediction(self,face_array):
+    def prediction(self,face_array1 , face_array2):
         # face_arrayss = self.face_array
-        expanded_img = np.expand_dims(face_array, axis=0)
-        preprocessed_img = preprocess_input(expanded_img)
+        expanded_img1 = np.expand_dims(face_array1, axis=0)
+        expanded_img2 = np.expand_dims(face_array2, axis=0)
+        preprocessed_img1 = preprocess_input(expanded_img1)
+        preprocessed_img2 = preprocess_input(expanded_img2)
         
         logger.info("Face prediction started.")
-        result = MODEL.predict(preprocessed_img)
+        result1 = MODEL.predict(preprocessed_img1)
+        result2 = MODEL.predict(preprocessed_img2)
         logger.info("Face prediction completed.")
-        return result
+        return result1 , result2
 
-    def similarity_list(self, result1,result2):
+    def similarity(self, result1,result2):
         # similarity_score = []
 
         sm_score = cosine_similarity(result1 ,result2)
@@ -45,14 +48,14 @@ class Recommend:
         #     logger.error(f"Error occurred in similarity_list method: {e}")
         #     raise CustomException(e, sys)
         
-    def recommend(self, similarity_lst):
-        self.similarity = []
-        self.index = []
-        def feature(x):
-            return x[1]
-        most_similar_5_imgs = sorted(list(enumerate(similarity_lst)), reverse=True, key=feature)[0:5]
+    # def recommend(self, similarity_lst):
+    #     self.similarity = []
+    #     self.index = []
+    #     def feature(x):
+    #         return x[1]
+    #     most_similar_5_imgs = sorted(list(enumerate(similarity_lst)), reverse=True, key=feature)[0:5]
 
-        return most_similar_5_imgs
+    #     return most_similar_5_imgs
     
     # def show_similar_img(self, file_path, most_similars):
     #     try:
