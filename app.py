@@ -7,7 +7,7 @@ from src.utils import load_pkl
 import os
 import cv2
 
-st.set_page_config(page_title="Two-Match", page_icon=":😄:", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="Two-Face", page_icon=":😄:", layout="wide", initial_sidebar_state="expanded")
 
 
 st.title('Two Faces✌🏻(Similarity between two Faces)')
